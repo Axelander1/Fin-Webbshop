@@ -8,26 +8,21 @@
     <title>Bertils Tech</title> 
 </head>
 <body>
-
-    <div class = "topbar">
-        <div class = topbarchild>
-            <a>
-                <img src="Menu.png" alt = "Sidebar">
-            </a>
-            
-            <h1>
-                Bertils Tech
-            </h1>
+    <!--Skapar bannern-->
+    <div class = "banner">
+        <div class = bannerchild>
+            <a><img src="Menu.png" alt = "Sidebar"></a>
+            <h1>Bertils Tech</h1>
         </div>
-        <div class = topbarchild>
-            <div id = "placeholder">
-            </div>
-
+        <div class = bannerchild>
+            <div id = "placeholder"></div>
             <div>
                 <img src="/Varukorg.png" alt="VAROKORG">
             </div>  
         </div>
     </div>
+
+    <!--Skapar containern som innehåller de fyra bilder som finns längst upp på frontpagen-->
     <div id = "frontpage_image_container">
         <img src="/coolcomputer.jpg" alt="cool computer" class = "frontpage_image">
         <img src="bertil.png" alt="cool sound system" class = "frontpage_image">
@@ -36,21 +31,28 @@
 
     </div>
 
+    <!--Skapar lådan som visar de olika kategorierna användaren kan välja mellan -->
+    
     <div class = "category_container">
-        <div>
+        <div class = "category_container_child">
             <img src="Processor.jpg" alt="Datorkomponenter" class = "category_image">
+            <h4>Datorkomponenter</h4>
         </div>
-        <div>
+        <div class = "category_container_child">
             <img src="Gmaer.jpg" alt="Gmaer" class = "category_image">
+            <h4>Datorkomponenter</h4>
         </div>
-       <div>
+       <div  class = "category_container_child">
         <img src="Speaker.jpg" alt="Datorkomponenter" class = "category_image">
+        <h4>Datorkomponenter</h4>
        </div>
-        <div>
+        <div class = "category_container_child">
             <img src="TV.jpg" alt="Datorkomponenter" class = "category_image">
+            <h4>Datorkomponenter</h4>
         </div>
-        <div>
+        <div class = "category_container_child">
             <img src="Keyboard.jpg" alt="Datorkomponenter" class = "category_image">
+            <h4>Datorkomponenter</h4>
         </div>
     </div>
 </body>
