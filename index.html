@@ -8,52 +8,152 @@
     <title>Bertils Tech</title> 
 </head>
 <body>
-    <!--Skapar bannern-->
-    <div class = "banner">
-        <div class = bannerchild>
-            <a><img src="Menu.png" alt = "Sidebar"></a>
-            <h1>Bertils Tech</h1>
-        </div>
-        <div class = bannerchild>
-            <div id = "placeholder"></div>
-            <div>
-                <img src="/Varukorg.png" alt="VAROKORG">
-            </div>  
-        </div>
-    </div>
 
-    <!--Skapar containern som innehåller de fyra bilder som finns längst upp på frontpagen-->
+<!--Skapar bannern-->
+<div class = "banner">
+    <div class = bannerchild>
+        <a><img src="Menu.png" alt = "Sidebar"></a>
+        <h1>Bertils Tech</h1>
+    </div>
+    <div class = bannerchild>
+        <div id = "placeholder"></div>
+        <div>
+            <img src="/Varukorg.png" alt="VAROKORG">
+        </div>  
+    </div>
+</div>
+
+<!--Skapar containern som innehåller de fyra bilder som finns längst upp på frontpagen samt texten över dessa-->
+
+<div id = "frontpage">
+
+    <h1>Välkommen till Bertils Tech!</h1>
+
     <div id = "frontpage_image_container">
-        <img src="/coolcomputer.jpg" alt="cool computer" class = "frontpage_image">
+        <img src="coolcomputer.jpg" alt="cool computer" class = "frontpage_image">
         <img src="bertil.png" alt="cool sound system" class = "frontpage_image">
-        <img src="/coolsound.png" alt="cool computer 2" class = "frontpage_image">
-        <img src="/computar.jpg" alt="angry man angry television" class = "frontpage_image">
+        <img src="coolsound.png" alt="cool computer 2" class = "frontpage_image">
+        <img src="computar.jpg" alt="angry man angry television" class = "frontpage_image">
 
     </div>
 
-    <!--Skapar lådan som visar de olika kategorierna användaren kan välja mellan -->
-    
-    <div class = "category_container">
-        <div class = "category_container_child">
+    <p id = "frontpage_text">Vi erbjuder Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam in maxime quam accusantium repellendus tempora dignissimos, temporibus repellat! Commodi ipsam eveniet quis? Totam sunt quae laborum perferendis eveniet officiis Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos est aliquam sit, rerum ut consectetur. Fuga deserunt incidunt laborum maiores quidem voluptas repellat. Hic pariatur sunt atque ad placeat iusto! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor incidunt asperiores debitis consequatur possimus perferendis quas quam recusandae saepe voluptates neque assumenda, voluptas sint maiores ea. Natus voluptates ipsum pariatur!.</p>
+
+</div>
+
+<!--Skapar containern som visar de olika kategorierna användaren kan välja mellan -->
+
+<div class = "categories">
+
+        <h1 class = "title-text">Kategorier</h1>
+
+    <div class = "category_card_container">
+        <a class = "category_container_child" href="bertil.html">
             <img src="Processor.jpg" alt="Datorkomponenter" class = "category_image">
             <h4>Datorkomponenter</h4>
-        </div>
-        <div class = "category_container_child">
+        </a>
+        <a class = "category_container_child" href="bertil.html">
             <img src="Gmaer.jpg" alt="Gmaer" class = "category_image">
             <h4>Datorkomponenter</h4>
-        </div>
-       <div  class = "category_container_child">
-        <img src="Speaker.jpg" alt="Datorkomponenter" class = "category_image">
-        <h4>Datorkomponenter</h4>
-       </div>
-        <div class = "category_container_child">
+        </a>
+        <a class = "category_container_child" href="bertil.html">
+            <img src="Speaker.jpg" alt="Datorkomponenter" class = "category_image">
+            <h4>Datorkomponenter</h4>
+        </a>
+        <a class = "category_container_child" href="bertil.html">
             <img src="TV.jpg" alt="Datorkomponenter" class = "category_image">
             <h4>Datorkomponenter</h4>
-        </div>
-        <div class = "category_container_child">
+        </a>
+        <a class = "category_container_child" href="bertil.html">
             <img src="Keyboard.jpg" alt="Datorkomponenter" class = "category_image">
             <h4>Datorkomponenter</h4>
-        </div>
+        </a>
     </div>
+
+</div>
+
+<!-- Produkter: bästsäljare och erbjudande -->
+
+<div class = "products">
+
+    <h3>Populära just nu</h3>
+
+    <div class = "products-container">
+        <div class = "product-card">
+            <div class = "image-column">
+            <img src = "Screen1.webp" alt = "skärm :)" class = "product-image">
+            </div>
+
+            <div class = "text-column">
+                <h3>Test</h3>
+                <ul class = "product-list">
+                    <li>Fakta 1</li>
+                    <li>Fakta 2</li>
+                    <li>Fakta 3</li>
+                </ul>   
+            </div>
+        </div>
+
+        <div class = "product-card">
+            <div class = "image-column">
+            <img src = "Screen1.webp" alt = "skärm :)" class = "product-image">
+            </div>
+
+            <div class = "text-column">
+                <h3>Test</h3>
+                <ul class = "product-list">
+                    <li>Fakta 1</li>
+                    <li>Fakta 2</li>
+                    <li>Fakta 3</li>
+                </ul>   
+            </div>
+        </div>
+
+        <div class = "product-card">
+            <div class = "image-column">
+            <img src = "Screen1.webp" alt = "skärm :)" class = "product-image">
+            </div>
+
+            <div class = "text-column">
+                <h3>Test</h3>
+                <ul class = "product-list">
+                    <li>Fakta 1</li>
+                    <li>Fakta 2</li>
+                    <li>Fakta 3</li>
+                </ul>   
+            </div>
+        </div>
+
+        <div class = "product-card">
+            <div class = "image-column">
+            <img src = "Screen1.webp" alt = "skärm :)" class = "product-image">
+            </div>
+
+            <div class = "text-column">
+                <h3>Test</h3>
+                <ul class = "product-list">
+                    <li>Fakta 1</li>
+                    <li>Fakta 2</li>
+                    <li>Fakta 3</li>
+                </ul>   
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--Footer-->
+
+<footer>
+
+
+</footer>
+
+
+
+
+
 </body>
 </html>
