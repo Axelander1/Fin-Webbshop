@@ -8,15 +8,36 @@ body {
     
 }
 
+button {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.sidebar {
+    background-color: #181818;
+
+    position: fixed;
+    z-index: 1;
+    width: 20%;
+
+    overflow: hidden;
+    margin-left: 2%;
+    margin-top: 2%;
+
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
 /*Skapar containern för bannern*/
 .banner {
     
     background-color: #181818;
     color: white;
     
-    position:sticky;
+    position: sticky;
 
     display: flex;
+        align-self: flex-start;
         justify-content: space-around;
         gap: 40%;
 
@@ -38,7 +59,6 @@ body {
         align-items: center;
         gap: 4%;
         
-
     height: 18vh;
     width: 18%;
     margin-right: 4%;
@@ -51,9 +71,7 @@ body {
         
 
     text-align: center;
-    margin-top: 2%;
-
-    
+    margin-top: 2%;    
 }
 
 #frontpage_text {
@@ -138,7 +156,7 @@ body {
 
 .products {
     margin-top: 6%;
-    color: black;
+    
 
     display: flex;
         align-items: center;
@@ -148,6 +166,7 @@ body {
 .products-container {
     margin-top: 2%;
     padding: 2%;
+    color: black;
 
     border-style:solid;
     border-color: #7282b7;
@@ -166,6 +185,7 @@ body {
 }
 
 h3{margin: 0%;}
+li{margin:0%;}
 
 .product-card {
     background-color: rgb(232, 232, 232);
@@ -234,7 +254,8 @@ h3{margin: 0%;}
 }
 
 .product-price-text {
-    color: rgb(255, 50, 50);
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
 
 }
 
@@ -250,5 +271,6 @@ footer {
 
 
     height: 200px;
+    width: 100%;
 }
 

@@ -12,8 +12,8 @@
 <!--Skapar bannern-->
 <div class = "banner">
     <div class = bannerchild>
-        <a><img src="Menu.png" alt = "Sidebar"></a>
-        <h1>Bertils Tech</h1>
+        <button href="javascript:void(0)" onclick="closeNav() "><img src="Menu.png" alt = "Sidebar"></button>
+        <a href = "#frontpage"><h1>Bertils Tech</h1></a>
     </div>
     <div class = bannerchild>
         <div id = "placeholder"></div>
@@ -21,6 +21,14 @@
             <img src="/Varukorg.png" alt="VAROKORG">
         </div>  
     </div>
+</div>
+
+<!-- Skapar sidebar -->
+
+<div class = "sidebar">
+    <a>Kategorier</a>
+    <a>Bästsäljare</a>
+    <a>Erbjudande</a>
 </div>
 
 <!--Skapar containern som innehåller de fyra bilder som finns längst upp på frontpagen samt texten över dessa-->
@@ -76,7 +84,7 @@
 
 <div class = "products">
 
-    <h3>Populära just nu</h3>
+    <h1>Populära just nu</h1>
 
     <div class = "products-container">
         <div class = "product-card">
@@ -98,7 +106,7 @@
                 </div>
 
                 <div class = "product-price">
-                    <h4 class = "product-price-text">1999kr</h4>
+                    <h3 class = "product-price-text">1999kr</h3>
                 </div>
 
             </div>
@@ -123,7 +131,7 @@
                 </div>
 
                 <div class = "product-price">
-                    <h4 class = "product-price-text">1999kr</h4>
+                    <h3 class = "product-price-text">1999kr</h3>
                 </div>
 
             </div>
@@ -149,7 +157,7 @@
                 </div>
 
                 <div class = "product-price">
-                    <h4 class = "product-price-text">1999kr</h4>
+                    <h3 class = "product-price-text">1999kr</h3>
                 </div>
 
             </div>
@@ -174,7 +182,7 @@
                 </div>
 
                 <div class = "product-price">
-                    <h4 class = "product-price-text">1999kr</h4>
+                    <h3 class = "product-price-text">1999kr</h3>
                 </div>
 
             </div>
@@ -187,14 +195,25 @@
 
 <!--Footer-->
 
-<footer>
+<footer>hej hej</footer>
 
 
-</footer>
+<!-- Script har bearbetats, men hämtades ursprungligen från:
+    https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp -->
 
+<script>
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("sidebar").style.width = "20%";
+  document.getElementById("sidebar").style.marginLeft ="2%";
+}
 
-
-
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("sidebar").style.width = "0px";
+  document.getElementById("sidebar").style.marginLeft = "0px";
+} 
+</script>
 
 </body>
 </html>
