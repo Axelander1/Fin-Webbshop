@@ -17,15 +17,17 @@ button {
 
     position: fixed;
     z-index: 1;
-    width: 20%;
+    width: 250px;
 
-    overflow: hidden;
     margin-left: 2%;
     margin-top: 2%;
+    overflow:hidden;
+    transition: 0.5s;
 
     display: flex;
         flex-direction: column;
         align-items: center;
+        
 }
 
 /*Skapar containern för bannern*/
@@ -33,14 +35,16 @@ button {
     
     background-color: #181818;
     color: white;
+    width: 100%;
     
-    position: sticky;
-
+    
     display: flex;
         align-self: flex-start;
         justify-content: space-around;
         gap: 40%;
 
+    position: fixed;
+    top: 0;
 }
 
 /*Sökruta*/
@@ -59,7 +63,7 @@ button {
         align-items: center;
         gap: 4%;
         
-    height: 18vh;
+    height: 12vh;
     width: 18%;
     margin-right: 4%;
 }
@@ -71,7 +75,7 @@ button {
         
 
     text-align: center;
-    margin-top: 2%;    
+    margin-top: 8%;    
 }
 
 #frontpage_text {
@@ -95,7 +99,7 @@ button {
 }
 
 .category_image {
-    width: 65%;
+    width: 55%;
     height: 100%;
     border-radius: 5px;
     overflow:hidden;

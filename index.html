@@ -9,10 +9,10 @@
 </head>
 <body>
 
-<!--Skapar bannern-->
+<!--Skapar bannern () -->
 <div class = "banner">
     <div class = bannerchild>
-        <button href="javascript:void(0)" onclick="closeNav() "><img src="Menu.png" alt = "Sidebar"></button>
+        <button onclick="deciderFunction()"><img src="Menu.png" alt = "Sidebar"></button>
         <a href = "#frontpage"><h1>Bertils Tech</h1></a>
     </div>
     <div class = bannerchild>
@@ -25,7 +25,7 @@
 
 <!-- Skapar sidebar -->
 
-<div class = "sidebar">
+<div class = "sidebar" id = "mySidebar">
     <a>Kategorier</a>
     <a>Bästsäljare</a>
     <a>Erbjudande</a>
@@ -198,22 +198,11 @@
 <footer>hej hej</footer>
 
 
-<!-- Script har bearbetats, men hämtades ursprungligen från:
-    https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp -->
 
-<script>
-    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
-function openNav() {
-  document.getElementById("sidebar").style.width = "20%";
-  document.getElementById("sidebar").style.marginLeft ="2%";
-}
+<!--DISPLAY HIDDEN PLS-->
 
-/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-function closeNav() {
-  document.getElementById("sidebar").style.width = "0px";
-  document.getElementById("sidebar").style.marginLeft = "0px";
-} 
-</script>
+<script src ="script.js"></script>
+
 
 </body>
 </html>
