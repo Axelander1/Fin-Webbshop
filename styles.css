@@ -12,22 +12,38 @@ button {
     background-color: rgba(0, 0, 0, 0);
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .sidebar {
     background-color: #181818;
 
     position: fixed;
+    top: 86px;
     z-index: 1;
-    width: 250px;
+    width: 220px;
+    height: 100%;
 
-    margin-left: 2%;
-    margin-top: 2%;
     overflow:hidden;
-    transition: 0.5s;
-
+    transition: 0.2s;
+    
     display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 16%;
         
+}
+
+.sidebarCategories {
+
+    margin-top: 10%;
+    height: 20%;    
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10%;
 }
 
 /*Skapar containern för bannern*/
@@ -75,7 +91,7 @@ button {
         
 
     text-align: center;
-    margin-top: 8%;    
+    margin-top: 7%;    
 }
 
 #frontpage_text {
@@ -99,7 +115,7 @@ button {
 }
 
 .category_image {
-    width: 55%;
+    width: 70%;
     height: 100%;
     border-radius: 5px;
     overflow:hidden;
@@ -108,12 +124,14 @@ button {
 
 
 .categories {
-    margin-top: 2%;
+    margin-top: 4%;
 
     display: flex;
         align-items: center;
         flex-direction: column;
 }
+
+
 
 .category_card_container {
 
@@ -124,8 +142,8 @@ button {
 
     padding: 1%;
     margin-left: 1%;
-    margin-top: 2%;
-    width: 75%;
+    margin-top: 1%;
+    width: 65%;
 
     display: flex;
         flex-direction: row;
@@ -140,7 +158,7 @@ button {
         flex-direction: column;
         align-items: center;
     
-    max-width: 30%;
+    width: 24%;
     background-color: rgb(232, 232, 232);
     margin: 1%;
     padding-top: 2%;
@@ -160,15 +178,14 @@ button {
 
 .products {
     margin-top: 6%;
-    
-
     display: flex;
         align-items: center;
         flex-direction: column;
+        flex-wrap: wrap;
 }
 
 .products-container {
-    margin-top: 2%;
+    margin-top: 1%;
     padding: 2%;
     color: black;
 
@@ -184,7 +201,12 @@ button {
         flex-wrap: wrap;
         gap: 4%;
 
-    width: 75%;
+    width: 65%;
+    
+}
+
+.product-image {
+    width: 180px;
     
 }
 
@@ -196,58 +218,25 @@ li{margin:0%;}
 
     display: flex;
         flex-direction: row;
-
+    
     padding: 1%;
     border-radius: 10px;
-    
 
-    width: 32%;
     border-style:solid;
     border-color:#bebec0;
     border-radius: 10px;
-
 }
 
-.product-image {
-    max-width: 100%;
-    height: 90%;
-    border-radius: 10px;
-    border: solid, rgb(235, 235, 235);
+.fuck-you {
+    
 }
 
-.image-column {
-    width: 45%;
-
+.product-card-top {
     display: flex;
-        justify-content: center;
-        align-items: flex-start;
-}
-
-.text-column {
-    display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: space-between; 
+        flex-wrap: nowrap;
         
-    width: 55%;
-    
-}
-
-.product-title {
-    width: 100%;
-    display: flex;
-        align-items: flex-start;
-        justify-content: center;
-    
-
-}
-
-.product-information-short {
-    width: 50%;
-    margin-top: 0%;
-    display: flex;
-        align-items: center;
-        justify-content: flex-start;
 
 }
 
