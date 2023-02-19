@@ -10,6 +10,13 @@ body {
 
 button {
     background-color: rgba(0, 0, 0, 0);
+    border-radius: 60px;
+    border: none;
+    padding: 1%;
+}
+
+button:hover {
+    background-color: rgb(30, 30, 30)
 }
 
 a {
@@ -21,9 +28,10 @@ a {
     background-color: #181818;
 
     position: fixed;
-    top: 86px;
+    top: 12%;
+
     z-index: 1;
-    width: 220px;
+    width: 0px;
     height: 100%;
 
     overflow:hidden;
@@ -143,7 +151,7 @@ a {
     padding: 1%;
     margin-left: 1%;
     margin-top: 1%;
-    width: 65%;
+    width: 64%;
 
     display: flex;
         flex-direction: row;
@@ -158,7 +166,8 @@ a {
         flex-direction: column;
         align-items: center;
     
-    width: 24%;
+    width: 28%;
+    min-width: 200px;
     background-color: rgb(232, 232, 232);
     margin: 1%;
     padding-top: 2%;
@@ -172,8 +181,8 @@ a {
     
 }
 
-.categories a:hover {
-    box-shadow: 0px 0px 12px 2px rgb(106, 106, 106);
+a:hover {
+    box-shadow: 0px 0px 8px 2px rgb(106, 106, 106);
 }
 
 .products {
@@ -184,9 +193,11 @@ a {
         flex-wrap: wrap;
 }
 
+
+
 .products-container {
     margin-top: 1%;
-    padding: 2%;
+    padding: 3%;
     color: black;
 
     border-style:solid;
@@ -198,57 +209,85 @@ a {
 
     display: flex;
         justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
         gap: 4%;
 
-    width: 65%;
+    width: 64%;
+    min-width: 360px;
     
 }
 
 .product-image {
-    width: 180px;
     
+    width: 46%;
+    padding: 1.4%;
+    border-radius: 10px;
+    display: flex;
+        align-items: center;
+
+
 }
 
 h3{margin: 0%;}
-li{margin:0%;}
+ul{
+    margin:4%;
+    font-size: 90%;
+    
+}
 
 .product-card {
     background-color: rgb(232, 232, 232);
+    color: black;
 
     display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 8%;
     
-    padding: 1%;
+    padding: 0.75%;
     border-radius: 10px;
+
+    width: 36%;
+    
+    min-width: 340px;
 
     border-style:solid;
     border-color:#bebec0;
     border-radius: 10px;
 }
 
-.fuck-you {
-    
+
+
+
+.product-information {
+    width: 100%;
+    margin-left: -10%;
 }
 
-.product-card-top {
-    display: flex;
-        flex-direction: row;
-        justify-content: space-between; 
-        flex-wrap: nowrap;
-        
-
+.product-text {
+    width: 64%;
 }
+
+
+
 
 .product-price {
-    width: 90%;
+    width: 100%;
+
     display: flex;
         justify-content: flex-end;
+        align-items: flex-end;
 }
 
 .product-price-text {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 2%;
     color: rgb(0, 0, 0);
     text-decoration: underline;
+
 
 }
 
