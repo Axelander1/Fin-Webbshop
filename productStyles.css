@@ -1,0 +1,214 @@
+body {
+    background-color: #212944;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    display: flex;
+        justify-content: center;
+}
+
+.banner button:hover {
+    background-color: rgb(30, 30, 30)
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* definerar egenskaper för sidebaren */
+.sidebar {
+    background-color: #181818;
+    color: white;
+
+    position: fixed;
+    top: 12%;
+    left: 0;
+
+    z-index: 1;
+    width: 0px;
+    height: 100%;
+
+    overflow:hidden;
+    transition: 0.2s;
+    
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16%;
+        
+}
+/* definerar egenskaper för alla länkar till kategorier. */
+.sidebarCategories {
+
+    margin-top: 10%;
+    height: 20%;    
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10%;
+}
+
+/*Skapar containern för bannern*/
+.banner {
+    
+    background-color: #181818;
+    color: white;
+    width: 100%;
+    
+    
+    display: flex;
+        align-self: flex-start;
+        justify-content: space-around;
+        gap: 40%;
+
+    position: fixed;
+    top: 0;
+}
+
+/*Sökruta*/
+#placeholder {
+    background-color: white;
+    height: 30px;
+    width: 500px;
+    border-radius: 20px;
+}
+
+/* Definerar regler för dem två barn som innehåller det som visas på bannern.*/
+.bannerchild {
+    display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4%;
+        
+    height: 12vh;
+    width: 18%;
+    margin-right: 4%;
+
+}
+.main {
+
+    margin-top: 100px;
+    padding: 1.5%;
+    background-color: white;
+    width: 54%;
+
+    border-style:solid;
+    border-color: #7282b7;
+    border-radius: 10px;
+    background-color: rgb(246, 246, 246);
+    box-shadow: 0px 0px 10px 6px #7282b7; 
+
+    display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction:column;
+
+}
+
+.product-page-top {
+    display: flex;
+        justify-content: space-between;
+
+}
+
+.product-page-image {
+    border-radius: 10px;
+    width: 48%;
+    min-width: 240px;
+}
+
+.price-card {
+    background-color:rgb(237, 237, 237);
+    border-radius: 20px;
+    border-style: solid;
+    border-color:rgb(194, 194, 194);
+    border-width: 2px;
+    
+    padding: 1.5%;
+
+    margin-top: 2%;
+    height: fit-content;
+    
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    
+}
+
+.product-text-container {
+    width: 60%;
+    margin-top: 2%;
+    display: flex;
+        flex-direction: column;       
+}
+
+.product-text {
+    font-size: 0.9rem
+}
+
+@media only screen and (max-width: 900px) {
+    .main{
+        padding: 2%;
+        width: 94%;
+        border-radius: 10px;
+    }
+    .product-page-image {
+        width: 90%;
+        border-radius: 5px;
+    }
+
+    .price-card {
+        border-radius: 5px;
+        margin-top: 2%;
+        width: 80%;
+        align-items: center;
+    }
+
+    .buy-button {
+        width: 100%;
+    }
+
+    .product-page-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-text-container {
+        width: 100%;
+        align-items: center;
+    }
+
+
+}
+
+footer {
+    
+    margin-top: 10%;
+
+    background-color: rgb(42, 42, 42);
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+
+    height: 250px;
+    width: 100%;
+}
+
+.footer-container {
+    width: 40%;
+    display: flex;
+        justify-content: space-between;
+
+
+}
+
+.footer-container-child {
+
+    display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 6px;
+
+}

@@ -1,5 +1,7 @@
 // Script har bearbetats, men hämtades ursprungligen från:
-    https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp //
+// https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp 
+//Dessa två funktioner öppnar respektive stänger sidebar:en.
+
 
 function openNav() {
     document.getElementById("mySidebar").style.width = "220px";
@@ -11,7 +13,8 @@ function openNav() {
     document.getElementById("mySidebar").style.marginLeft = "0%";} 
 
 // Delvis hämtad från 
-   https://stackoverflow.com/questions/52049021/if-statement-to-check-css-property-not-working
+// https://stackoverflow.com/questions/52049021/if-statement-to-check-css-property-not-working
+// Bestämmer ifall sidebar:en ska öppnas eller stängas, och gör detta genom att kolla ifall den är stor eller liten.
 
 function deciderFunction() {
     var sidebar = document.getElementById("mySidebar");

@@ -24,11 +24,13 @@ a {
     color: white;
 }
 
+/* definerar egenskaper för sidebaren */
 .sidebar {
     background-color: #181818;
 
     position: fixed;
     top: 12%;
+    left: 0;
 
     z-index: 1;
     width: 0px;
@@ -43,7 +45,7 @@ a {
         gap: 16%;
         
 }
-
+/* definerar egenskaper för alla länkar till kategorier. */
 .sidebarCategories {
 
     margin-top: 10%;
@@ -123,8 +125,7 @@ a {
 }
 
 .category_image {
-    width: 70%;
-    height: 100%;
+    width: 80%;
     border-radius: 5px;
     overflow:hidden;
 }
@@ -147,18 +148,19 @@ a {
     border-color: #7282b7;
     border-radius: 10px;
     background-color: rgb(246, 246, 246);
+    box-shadow: 0px 0px 10px 6px #7282b7; 
 
     padding: 1%;
     margin-left: 1%;
     margin-top: 1%;
-    width: 64%;
+    width: 72%;
 
     display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
 
-    box-shadow: 0px 0px 10px 6px #7282b7;          
+             
 }
 
 .category_container_child {
@@ -166,7 +168,7 @@ a {
         flex-direction: column;
         align-items: center;
     
-    width: 28%;
+    width: 20%;
     min-width: 200px;
     background-color: rgb(232, 232, 232);
     margin: 1%;
@@ -193,11 +195,12 @@ a:hover {
         flex-wrap: wrap;
 }
 
-
-
 .products-container {
-    margin-top: 1%;
-    padding: 3%;
+    margin-top: 1.5%;
+    padding-top: 1.5%;
+    padding-bottom: 1%;
+    padding: 1%;
+    
     color: black;
 
     border-style:solid;
@@ -211,16 +214,16 @@ a:hover {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 4%;
+        gap: 2%;
 
-    width: 64%;
-    min-width: 360px;
+    width: 76%;
+    min-width: 370px;
     
 }
 
 .product-image {
     
-    width: 46%;
+    width: 52%;
     padding: 1.4%;
     border-radius: 10px;
     display: flex;
@@ -249,7 +252,7 @@ ul{
     padding: 0.75%;
     border-radius: 10px;
 
-    width: 36%;
+    width: 24%;
     
     min-width: 340px;
 
@@ -258,20 +261,17 @@ ul{
     border-radius: 10px;
 }
 
-
-
-
 .product-information {
     width: 100%;
     margin-left: -10%;
 }
 
 .product-text {
-    width: 64%;
+    width: 58%;
+
+    display: flex;
+        flex-direction: column;
 }
-
-
-
 
 .product-price {
     width: 100%;
@@ -279,6 +279,8 @@ ul{
     display: flex;
         justify-content: flex-end;
         align-items: flex-end;
+        align-self: flex-end;
+        
 }
 
 .product-price-text {
@@ -291,6 +293,46 @@ ul{
 
 }
 
+@media only screen and (max-width: 600px) {
+
+#frontpage_image_container {flex-wrap:wrap; gap: 3%;}
+
+.frontpage_image {
+    width: 40%;
+}
+
+.category_container_child h4{font-size: 0.65em}
+.category_container_child{min-width: 44%;}
+
+.products-container {min-width: 80%;}
+.product-information {
+    display: none;
+}
+
+.product-card {
+    border-radius: 5px;
+    min-width: 40%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-image {
+    border-radius: 5px;
+    width: 80%;
+}
+
+.product-text {width: 100%; align-items: center;}
+
+.product-price {justify-content: center;}
+
+.product-card h3, h4 {font-size: 0.6rem}
+
+
+}
+
+    
+
+
 footer {
     
     margin-top: 10%;
@@ -301,8 +343,24 @@ footer {
         align-items: center;
         flex-wrap: wrap;
 
-
-    height: 200px;
+    height: 250px;
     width: 100%;
+}
+
+.footer-container {
+    width: 40%;
+    display: flex;
+        justify-content: space-between;
+
+
+}
+
+.footer-container-child {
+
+    display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 6px;
+
 }
 
