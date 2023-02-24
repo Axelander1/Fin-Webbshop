@@ -1,4 +1,6 @@
 
+/* VIssa generella regler här */
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -82,15 +84,16 @@ a {
     
 }
 
-/*Sökruta*/
-#placeholder {
-    background-color: white;
-    height: 30px;
-    width: 500px;
 
-    border-radius: 20px;
+#cart-item-number {
+    margin-left: -1%;
+    margin-top: -2%;
+    padding: 2%;
+    font-size: 120%;
+    color: red;
+    border-radius: 100%;
+
 }
-
 /* Definerar regler för dem två barn som innehåller det som visas på bannern.*/
 .bannerchild {
     display: flex;
@@ -110,7 +113,7 @@ a {
 .cart-icon {
     display: flex;
 }
-
+/* Skapar all information för bilderna och texten på förtsa sida  */
 #frontpage {
     display: flex;
     align-items: center;
@@ -140,6 +143,8 @@ a {
 .frontpage_image {
     width: 20%;
 }
+
+/* Definerar infromation för kategori-rutan */
 
 .category_image {
     width: 80%;
@@ -204,8 +209,10 @@ a {
     box-shadow: 0px 0px 8px 2px rgb(106, 106, 106);
 }
 
+/* Definerar egenskaper för produkter */
+
 .products {
-    margin-top: 6%;
+    margin-top: 100px;
     display: flex;
         align-items: center;
         flex-direction: column;
@@ -250,7 +257,10 @@ a {
 
 
 }
-
+.products button {
+    background-color: rgb(210, 210, 210);
+    padding: 1%;
+}
 h3{margin: 0%;}
 ul{
     margin:4%;
@@ -351,6 +361,13 @@ ul{
     margin-right: 10%;
 }
 
+.cart-page-quantity {
+    display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+}
+
 
 
 .cart-page-product-column {
@@ -362,7 +379,9 @@ ul{
 }
 
 
-
+.remove-btn {
+    background-color: rgb(210,210,210)
+}
 
 .cart-page-product-row {
     color: black;
@@ -372,7 +391,7 @@ ul{
     padding: 0.5%;
     gap:10%;
     margin: 2%;
-    min-width: 450px;
+    min-width: 350px;
 
 
     background-color: rgb(239, 239, 239);
@@ -389,9 +408,20 @@ ul{
 
 
 #purchase-btn {
-    padding: 0% 60%;
+    margin-top: 10%;
+    padding: 10% 60%;
     border-radius: 0px;
+    font-size: 100%;
     background-color: rgb(26, 183, 26);
+}
+
+#empty-cart-button {
+    margin-top: 10%;
+
+    padding: 10% 44.5%;
+    border-radius: 0px;
+    font-size: 100%;
+    background-color: rgb(183, 26, 26);  
 }
 
 #purchase-btn:hover {
@@ -399,13 +429,36 @@ ul{
 }
 
 
-@media only screen and (max-width: 800px) {
+/* Mediao nly grejer */
 
+@media only screen and (max-width: 800px) {
+    #cart-page-container {
+        flex-direction: column-reverse;
+    
+    }
+
+    #cart-page-purchase-container {
+        margin-top: 10%;
+    }
+
+  
+
+    #purchase-btn {
+        padding: 6% 12%;
+    }
+    #empty-cart-button {
+        padding: 6%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
 
+#cart-page-container {font-size: 0.65rem}
+
 #frontpage_image_container {flex-wrap:wrap; gap: 3%;}
+
+.cart-page-product-row {max-width: 250px;}
+.cart-page-image {min-width: 60px;}
 
 .frontpage_image {
     width: 40%;
@@ -437,11 +490,16 @@ ul{
 
 .product-card h3, h4 {font-size: 0.6rem}
 
+.add-to-cart {font-size:0.6rem}
+
+footer {font-size: 0.7rem;}
 
 }
 
-    
 
+
+    
+/* Allting för footern */
 
 footer {
     

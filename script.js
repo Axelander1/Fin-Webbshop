@@ -193,9 +193,18 @@ function totalCost(product) {
 }
 
 function clearCart () {
+
+    let cartProductColumn = document.querySelector("#cart-page-product-column")
+    let sum = document.querySelector("#sum")
+    let itemsInCart = document.querySelector("#cart-item-number")
+    cartProductColumn.innerHTML = "";
+    sum.innerText = "Total Summa:";
+    itemsInCart.innerText = "";
+
     localStorage.clear()
     onLoadCartNumbers()
     displayCart()
+
 }
 
 function displayCart() {
@@ -222,10 +231,10 @@ function displayCart() {
             <img class = "cart-page-image" src = ${item.src} alt = "${item.tag}">
             <div class="cart-page-text">
                 <h3>${item.name}</h3>
-                <h5>${item.price}kr</h5>
+                <h5> ${item.price}kr</h5>
             </div>
             <div class="cart-page-quantity">
-                <input class = "quantity" type="number" value = ${item.inCart}>
+                <p class= "quantity">Antal: ${item.inCart}</p>
                 <button class = "remove-btn">Ta bort från kundvagnen</button>
     
             </div>
@@ -237,7 +246,6 @@ function displayCart() {
         
     }
     removeButton();
-    detectQuantity()
 }
 
 window.addEventListener("storage", () => {
@@ -278,34 +286,6 @@ function removeItemFromCart (i) {
     displayCart();
 }
 
-function detectQuantity() {
-    
-    let quantity = document.getElementsByClassName("quantity");
-    console.log(quantity)
-    
-    for (let i = 0; i < quantity.length; i++) {
-        quantity[i].addEventListener("change", () => {
-            changeQuantity(i)
-        })}
-
-
-}
-
-
-
-function changeQuantity (i) {
-    var quantity = document.getElementsByClassName("quantity");
-    var changedQuantity = quantity[i]
-
-    productFromCart = JSON.parse(localStorage.getItem("productsInCart"))
-    
-    console.log(productFromCart)
-    productFromCart = productFromCart[i]
-    console.log(i)
-    console.log(productFromCart)
-
-
-}
 
 
 function completePurchase() {
@@ -314,11 +294,13 @@ function completePurchase() {
     let itemsInCart = document.querySelector("#cart-item-number")
     cartProductColumn.innerHTML = "";
     sum.innerText = "Total Summa:";
-    itemsInCart.innerText = "";
+    itemsInCart.innerText = "0";
     
     console.log("hej hej tjena tjena")
     alert("Tack för ditt köp!");
     localStorage.clear();
+
+    window.location.href = "index.html";
 }
 
 
