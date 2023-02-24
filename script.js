@@ -203,7 +203,7 @@ function displayCart() {
                 <h5>${item.price}</h5>
             </div>
             <div class="cart-page-quantity">
-                <input type="number" value = ${item.inCart}>
+                <input class = "quantity-btn" type="number" value = ${item.inCart}>
                 <button class = "remove-btn">Ta bort från kundvagnen</button>
     
             </div>
@@ -255,18 +255,40 @@ function removeItemFromCart (i) {
     displayCart();
 }
 
+let quantity = document.querySelectorAll(".quantity-btn")
+console.log(quantity)
+
+for (let i = 0; i < quantity.length; i++) {
+
+    var quantities = []
+    quantities = quantities.append(quantity[i].value)
+    console.log(quantities)
+
+    quantity[i].addEventListener("change", () => {
+        changeQuantity()
+    })}
+
+function changeQuantity () {
+
+
+
+}
+
 
 function completePurchase() {
     let cartProductColumn = document.querySelector("#cart-page-product-column")
     let sum = document.querySelector("#sum")
+    let itemsInCart = document.querySelector("#cart-item-number")
     cartProductColumn.innerHTML = "";
     sum.innerText = "Total Summa:";
+    itemsInCart.innerText = "";
     
     console.log("hej hej tjena tjena")
     alert("Tack för ditt köp!");
     localStorage.clear();
-
 }
+
+
 
 onLoadCartNumbers();
 displayCart();
