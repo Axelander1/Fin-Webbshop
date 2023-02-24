@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori</title>
     <link rel="stylesheet" href="styles.css">
-    <script src ="script.js" async></script>
-    <title>Bertils Tech</title> 
+    <script src="script.js" async></script>
 </head>
 <body>
 
-<!--Skapar bannern () -->
+    <!--Skapar bannern () -->
 <div class = "banner">
     <div class = bannerchild>
         <button onclick="deciderFunction()"><img src="images/Menu.png" alt = "Sidebar"></button>
-        <a href = "#frontpage"><h1>Bertils Tech</h1></a>
+        <a href = "index.html"><h1>Bertils Tech</h1></a>
     </div>
     <div class = bannerchild>
         <div class = "cart-icon">
@@ -24,7 +24,6 @@
     </div>
 </div>
 
-<!-- Skapar kundvagnen -->
 
 
 <!-- Skapar sidebar -->
@@ -43,61 +42,11 @@
     <a><h3>Erbjudande</h3></a>
 </div>
 
-<!--Skapar containern som innehåller de fyra bilder som finns längst upp på frontpagen samt texten över dessa-->
-
-<div id = "frontpage">
-
-    <h1>Välkommen till Bertils Tech!</h1>
-
-    <div id = "frontpage_image_container">
-        <img src="images/coolcomputer.webp" alt="cool computer" class = "frontpage_image">
-        <img src="images/bertil.webp" alt="cool sound system" class = "frontpage_image">
-        <img src="images/coolsound.webp" alt="cool computer 2" class = "frontpage_image">
-        <img src="images/computar.webp" alt="angry man angry television" class = "frontpage_image">
-
-    </div>
-
-</div>
-
-<!--Skapar containern som visar de olika kategorierna användaren kan välja mellan -->
-
-<div class = "categories">
-
-        <h1 class = "title-text">Kategorier</h1>
-
-    <div class = "category_card_container">
-        <a class = "category_container_child" href="category1.html">
-            <img src="images/Processor.jpg" alt="Datorkomponenter" class = "category_image">
-            <h4>Datorkomponenter</h4>
-        </a>
-        <a class = "category_container_child" href="category2.html">
-            <img src="images/Gmaer.jpg" alt="Gmaer" class = "category_image">
-            <h4>Datorkomponenter</h4>
-        </a>
-        <a class = "category_container_child" href="category3.html">
-            <img src="images/Speaker.jpg" alt="Datorkomponenter" class = "category_image">
-            <h4>Datorkomponenter</h4>
-        </a>
-        <a class = "category_container_child" href="category4.html">
-            <img src="images/TV.jpg" alt="Datorkomponenter" class = "category_image">
-            <h4>Datorkomponenter</h4>
-        </a>
-        <a class = "category_container_child" href="category5.html">
-            <img src="images/Keyboard.jpg" alt="Datorkomponenter" class = "category_image">
-            <h4>Datorkomponenter</h4>
-        </a>
-    </div>
-
-</div>
-
-<!-- Produkter: bästsäljare och erbjudande -->
-
-<div class = "products">
+<div class = "products" id = "category-page">
 
     <h1>Populära just nu</h1>
 
     <div class = "products-container">
-        
         <div class = "product-card">
             <img src = "images/Screen1.webp" alt="screaan" class = "product-image">
 
@@ -154,24 +103,6 @@
         </div>
 
         <div class = "product-card">
-            <img src = "images/Screen1.webp" alt="1440p skärm" class = "product-image">
-
-            <div class = "product-text">
-                <h3 class = "product-title">1440p skärm</h3>
-                <ul class = "product-information">
-                    <li>2560x1440</li>
-                    <li>Fina färger</li>
-                    <li>LCD</li>
-                </ul>     
-                
-                <div class = "product-price">
-                    <button class = "add-to-cart">Lägg i varukorgen</button>
-                    <h4 class = "product-price-text">2999kr</h4>
-                </div>  
-            </div>
-        </div>
-
-        <div class = "product-card">
             <img src = "images/Screen1.webp" alt="screaan" class = "product-image">
 
             <div class = "product-text">
@@ -206,10 +137,28 @@
                 </div>  
             </div>
         </div>
+
+        <div class = "product-card">
+            <img src = "images/Screen1.webp" alt="screaan" class = "product-image">
+
+            <div class = "product-text">
+                <h3 class = "product-title">Fin produkt</h3>
+                <ul class = "product-information">
+                    <li>2560x1440</li>
+                    <li>Fina färger</li>
+                    <li>LCD</li>
+                </ul>     
+                
+                <div class = "product-price">
+                    <button class = "add-to-cart">Lägg i varukorgen</button>
+                    <h4 class = "product-price-text">2999kr</h4>
+                </div>  
+            </div>
+        </div>
+        
 
     </div>
 </div>
-
 
 <!--Footer-->
 
@@ -232,9 +181,6 @@
         </div>
     </div>
 </footer>
-
-
-
-
+    
 </body>
 </html>

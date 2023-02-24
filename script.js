@@ -1,4 +1,4 @@
-console.log("varför tvingar du oss att göra detta???????")
+
 
 // Script har bearbetats, men hämtades ursprungligen från:
 // https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp 
@@ -42,8 +42,30 @@ function deciderFunction() {
 
 let carts = document.querySelectorAll(".add-to-cart");
 
+var products = []
 
-let products = [
+
+let productsOnPage = document.querySelectorAll(".product-card")
+let productTitles = document.querySelectorAll(".product-title")
+let productSrc = document.querySelectorAll(".product-image")
+let productPrice = document.querySelectorAll(".product-price-text")
+let productAlt = document.querySelectorAll(".product-image")
+
+for( let i=0; i < productsOnPage.length; i++) {   
+    let productIntPrice = productPrice[i].innerText
+    productIntPrice = productIntPrice.replace("kr","")
+    productIntPrice = parseInt(productIntPrice)
+   
+    products.push(
+        {
+            name:productTitles[i].innerText, tag:productAlt[i].alt, src:productSrc[i].src, price:productIntPrice, inCart:0
+        }
+    )
+}
+
+console.log(products)
+
+/*let products = [
     {
         name: 'Dator',
         tag: "dator",
@@ -91,12 +113,13 @@ let products = [
         price: 2999,
         inCart: 0
     }
-]
+]*/
+
 
 
 for( let i=0; i < carts.length; i++) {
     carts[i].addEventListener("click", () => {
-        console.log("JavaScript är ett demoniskt språk");
+        console.log("JavaScript är ett demoniskt språk");   
         cartNumbers(products[i]);
         totalCost(products[i])
         displayCart();
@@ -137,13 +160,13 @@ function setItems(product) {
     console.log("My cartItems are:", cartItems)
 
     if(cartItems != null) {
-        if(cartItems[product.tag] == undefined) {
+        if(cartItems[product.name] == undefined) {
             cartItems = {
                 ...cartItems,
-                [product.tag]: product
+                [product.name]: product
             }
         }  
-        cartItems[product.tag].inCart += 1;
+        cartItems[product.name].inCart += 1;
     } else {
         product.inCart = 1;
         cartItems = {
@@ -172,8 +195,7 @@ function totalCost(product) {
 function clearCart () {
     localStorage.clear()
     onLoadCartNumbers()
-    console.log("Hej hej")
-    updateCart()
+    displayCart()
 }
 
 function displayCart() {
@@ -200,10 +222,10 @@ function displayCart() {
             <img class = "cart-page-image" src = ${item.src} alt = "${item.tag}">
             <div class="cart-page-text">
                 <h3>${item.name}</h3>
-                <h5>${item.price}</h5>
+                <h5>${item.price}kr</h5>
             </div>
             <div class="cart-page-quantity">
-                <input class = "quantity-btn" type="number" value = ${item.inCart}>
+                <input class = "quantity" type="number" value = ${item.inCart}>
                 <button class = "remove-btn">Ta bort från kundvagnen</button>
     
             </div>
@@ -215,6 +237,7 @@ function displayCart() {
         
     }
     removeButton();
+    detectQuantity()
 }
 
 window.addEventListener("storage", () => {
@@ -255,21 +278,31 @@ function removeItemFromCart (i) {
     displayCart();
 }
 
-let quantity = document.querySelectorAll(".quantity-btn")
-console.log(quantity)
+function detectQuantity() {
+    
+    let quantity = document.getElementsByClassName("quantity");
+    console.log(quantity)
+    
+    for (let i = 0; i < quantity.length; i++) {
+        quantity[i].addEventListener("change", () => {
+            changeQuantity(i)
+        })}
 
-for (let i = 0; i < quantity.length; i++) {
 
-    var quantities = []
-    quantities = quantities.append(quantity[i].value)
-    console.log(quantities)
+}
 
-    quantity[i].addEventListener("change", () => {
-        changeQuantity()
-    })}
 
-function changeQuantity () {
 
+function changeQuantity (i) {
+    var quantity = document.getElementsByClassName("quantity");
+    var changedQuantity = quantity[i]
+
+    productFromCart = JSON.parse(localStorage.getItem("productsInCart"))
+    
+    console.log(productFromCart)
+    productFromCart = productFromCart[i]
+    console.log(i)
+    console.log(productFromCart)
 
 
 }
@@ -293,38 +326,7 @@ function completePurchase() {
 onLoadCartNumbers();
 displayCart();
 
-/*function displayCategory(category) {
 
-    let categoryPageIdPresent = document.querySelector("#category-page")
-    let productsContainer = document.querySelector(".products")
-
-    if( categoryPageIdPresent && productContainer) {
-        console.log("Adding items from JS to category")
-        products
-        productsContainer.innerHTML = "";
-        
-        Object.values(category).map(item => {
-            .innerHTML += `
-            <img src = "images/Screen1.webp" alt="screaan" class = "product-image">
-
-            <div class = "product-text">
-                <h3>Fin produkt</h3>
-                <ul class = "product-information">
-                    <li>2560x1440</li>
-                    <li>Fina färger</li>
-                    <li>LCD</li>
-                </ul>     
-                
-                <div class = "product-price">
-                    <button class = "add-to-cart">Lägg i varukorgen</button>
-                    <h4 class = "product-price-text">2999kr</h4>
-                </div>  
-            </div>
-            `
-        })
-        
-    }
-}*/
 
 
 console.log("Finished loading")
