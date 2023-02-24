@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bertils Tech - Kassa</title>
+    <link rel = "stylesheet" href = "styles.css">
+    <script src = "script.js" async></script>
+</head>
+<body>
+
+    <!--Skapar bannern () -->
+<div class = "banner">
+    <div class = bannerchild>
+        <button onclick="deciderFunction()"><img src="images/Menu.png" alt = "Sidebar"></button>
+        <a href = "index.html"><h1>Bertils Tech</h1></a>
+    </div>
+    <div class = bannerchild>
+        <div class = "cart-icon">
+            <button><img src="images/Varukorg.png" alt="VAROKORG"></button>
+            <p id = "cart-item-number">0</p>
+        </div>  
+    </div>
+</div>
+
+
+<!-- Skapar sidebar -->
+
+<div class = "sidebar" id = "mySidebar">
+    <div class = "sidebarCategories">
+        <a id = "topText"><h3>Kategorier</h3></a>
+            <a class = "text">Datorkomponenter</a>
+            <a class = "text">Datorkomponenter</a>
+            <a class = "text">Datorkomponenter</a>
+            <a class = "text">Datorkomponenter</a>
+            <a class = "text">Datorkomponenter</a>
+    </div>
+    
+    <a><h3>Bästsäljare</h3></a>
+    <a><h3>Erbjudande</h3></a>
+</div>
+
+<div id = "cart-page-container">
+    
+<div id = "cart-page-product-column">
+
+</div>
+<div id = "cart-page-purchase-container">
+    <div>
+        <h3 id = "sum">Total summa: 0kr</h3>
+        <button id = "purchase-btn" onclick="completePurchase()"><h2>Köp</h2></button>
+    </div>
+</div>
+      
+
+</div>
+    
+</body>
+</html>

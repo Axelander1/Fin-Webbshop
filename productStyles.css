@@ -3,7 +3,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     display: flex;
-        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 }
 
 .banner button:hover {
@@ -85,6 +86,50 @@ a {
     margin-right: 4%;
 
 }
+
+.cart {
+    position: fixed;
+        left: 70%;
+        top: 13%;
+    
+    z-index: 1;
+    width: 22%;
+    height:fit-content;
+    border-style: solid;
+    border-color: rgb(195, 195, 195);
+    border-radius: 6px;
+    background-color: white;
+    padding: 0.5%;
+
+    display: flex;
+        justify-content: flex-start;
+        flex-direction: column;   
+}
+
+.cart-item {
+    display: flex;
+        justify-content: space-around;
+
+    margin-bottom: 1%;
+
+}
+
+.cart-image {
+    width: 100px;
+}
+
+.cart-item-quantity {
+    display: flex;
+        flex-direction: column;
+}
+
+.cart-item-text {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
 .main {
 
     margin-top: 100px;
@@ -105,19 +150,19 @@ a {
 
 }
 
-.product-page-top {
+#product-page-top {
     display: flex;
         justify-content: space-between;
 
 }
 
-.product-page-image {
+#product-page-image {
     border-radius: 10px;
     width: 48%;
     min-width: 240px;
 }
 
-.price-card {
+#price-card {
     background-color:rgb(237, 237, 237);
     border-radius: 20px;
     border-style: solid;
@@ -136,14 +181,14 @@ a {
     
 }
 
-.product-text-container {
+#product-text-container {
     width: 60%;
     margin-top: 2%;
     display: flex;
         flex-direction: column;       
 }
 
-.product-text {
+#product-text {
     font-size: 0.9rem
 }
 
@@ -153,12 +198,12 @@ a {
         width: 94%;
         border-radius: 10px;
     }
-    .product-page-image {
+    #product-page-image {
         width: 90%;
         border-radius: 5px;
     }
 
-    .price-card {
+    #price-card {
         border-radius: 5px;
         margin-top: 2%;
         width: 80%;
@@ -169,12 +214,12 @@ a {
         width: 100%;
     }
 
-    .product-page-top {
+    #product-page-top {
         flex-direction: column;
         align-items: center;
     }
 
-    .product-text-container {
+    #product-text-container {
         width: 100%;
         align-items: center;
     }
@@ -191,6 +236,7 @@ footer {
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
+        align-self: flex-end;
 
     height: 250px;
     width: 100%;

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src ="script.js" async></script>
     <title>Bertils Tech</title> 
 </head>
 <body>
@@ -16,11 +17,32 @@
         <a href = "#frontpage"><h1>Bertils Tech</h1></a>
     </div>
     <div class = bannerchild>
-        <div id = "placeholder"></div>
-        <div>
-            <button><img src="images/Varukorg.png" alt="VAROKORG"></button>
+        <div class = "cart-icon">
+            <a href="cart.html"><img src="images/Varukorg.png" alt="VAROKORG"></a>
+            <p id = "cart-item-number">0</p>
         </div>  
     </div>
+</div>
+
+<!-- Skapar kundvagnen -->
+
+<div class = "cart">
+    <div class = "cart-item">
+        
+        <img src="" alt = "bertil" class = "cart-image">
+        
+        <div class = "cart-item-text">
+            <h4 class = "cart-item-title"></h4>
+            <p class = "cart-item-price"></p>
+        </div>
+
+        <div class = "cart-quantity-container">
+            <input type = "number" value = "1" class = "item-quantity">
+            <button class = "remove-button">Ta bort</button>
+        </div>
+    
+    </div>
+    <button onclick="clearCart()">Töm korgen</button>
 </div>
 
 <!-- Skapar sidebar -->
@@ -62,7 +84,7 @@
         <h1 class = "title-text">Kategorier</h1>
 
     <div class = "category_card_container">
-        <a class = "category_container_child" href="bertil.html">
+        <a class = "category_container_child" href="category.html" onclick = "displayCategory(category1)">
             <img src="images/Processor.jpg" alt="Datorkomponenter" class = "category_image">
             <h4>Datorkomponenter</h4>
         </a>
@@ -106,6 +128,7 @@
                 </ul>     
                 
                 <div class = "product-price">
+                    <button class = "add-to-cart">Lägg i varukorgen</button>
                     <h4 class = "product-price-text">2999kr</h4>
                 </div>  
             </div>
@@ -124,6 +147,7 @@
                 </ul>     
                 
                 <div class = "product-price">
+                    <button class = "add-to-cart">Lägg i varukorgen</button>
                     <h4 class = "product-price-text">2999kr</h4>
                 </div>  
             </div>
@@ -141,6 +165,7 @@
                 </ul>     
                 
                 <div class = "product-price">
+                    <button class = "add-to-cart">Lägg i varukorgen</button>
                     <h4 class = "product-price-text">2999kr</h4>
                 </div>  
             </div>
@@ -158,6 +183,7 @@
                 </ul>     
                 
                 <div class = "product-price">
+                    <button class = "add-to-cart">Lägg i varukorgen</button>
                     <h4 class = "product-price-text">2999kr</h4>
                 </div>  
             </div>
@@ -175,6 +201,7 @@
                 </ul>     
                 
                 <div class = "product-price">
+                    <button class = "add-to-cart">Lägg i varukorgen</button>
                     <h4 class = "product-price-text">2999kr</h4>
                 </div>  
             </div>
@@ -192,6 +219,7 @@
                 </ul>     
                 
                 <div class = "product-price">
+                    <button class = "add-to-cart">Lägg i varukorgen</button>
                     <h4 class = "product-price-text">2999kr</h4>
                 </div>  
             </div>
@@ -223,7 +251,7 @@
     </div>
 </footer>
 
-<script src ="script.js"></script>
+
 
 
 </body>
